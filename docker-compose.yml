@@ -1,0 +1,25 @@
+version: '3.9'
+
+services:
+
+  backend:
+    image: seu-usuario-dockerhub/ada-flix-backend:latest
+    container_name: ada-flix-backend
+    ports:
+      - "8080:8080"
+    networks:
+      - ada-flix-network
+
+  frontend:
+    image: seu-usuario-dockerhub/ada-flix-frontend:latest
+    container_name: ada-flix-frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - ada-flix-network
+
+networks:
+  ada-flix-network:
+    driver: bridge
