@@ -3,7 +3,7 @@ version: '3.9'
 services:
 
   backend:
-    image: seu-usuario-dockerhub/ada-flix-backend:latest
+    image: matheuscampelo/ada-flix-backend:latest
     container_name: ada-flix-backend
     ports:
       - "8080:8080"
@@ -11,7 +11,7 @@ services:
       - ada-flix-network
 
   frontend:
-    image: seu-usuario-dockerhub/ada-flix-frontend:latest
+    image: matheuscampelo/ada-flix-frontend:latest
     container_name: ada-flix-frontend
     ports:
       - "80:80"
